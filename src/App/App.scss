@@ -1,3 +1,6 @@
+body {
+  background-color: #61dafb;
+}
 .App {
   text-align: center;
 }
@@ -30,4 +33,26 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.title-head {
+  padding: 17px;
+}
+
+.title-head-name {
+  padding: 0;
+}
+
+.Dog {
+  margin-top: 9px;
+  margin-bottom: 9px;
+}
+
+.App {
+  background-color: skyblue;
+}
+
+.DogPen {
+  border-bottom: 1px solid black;
+  padding: 10px;
 }
