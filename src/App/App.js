@@ -1,24 +1,20 @@
 import React from 'react';
 import firebase from 'firebase/app';
-import 'firebase/auth';
 
-import myDogs from './dogs';
-import DogPen from '../Components/DogPen/DogPen';
-import myWorkers from './workers';
+import Auth from '../Components/Auth/Auth';
+import Header from '../Components/Header/Header';
 import Home from '../Components/Home/Home';
 
-import './App.scss';
+import connectFirebase from '../helpers/data/connection';
+
+connectFirebase();
 
 class App extends React.Component {
   state = {
-    dogs: [],
-    workers: [],
     authed: false,
   }
 
   componentDidMount() {
-    this.setState({ dogs: myDogs });
-    this.setState({ workers: myWorkers });
     this.removeListener = firebase.auth().onAuthStateChanged((user) => {
       if (user) {
         this.setState({ authed: true });
@@ -33,9 +29,6 @@ class App extends React.Component {
   }
 
   render() {
-    const { dogs } = this.state;
-    const { workers } = this.state;
-
     const { authed } = this.state;
     const loadComponent = () => {
       if (authed) {
@@ -46,7 +39,8 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <Home />
+        <Header utheds={authed}/>
+        {loadComponent()}
       </div>
     );
   }

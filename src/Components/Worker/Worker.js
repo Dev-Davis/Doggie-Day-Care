@@ -1,10 +1,20 @@
 import React from 'react';
 
-import workerShape from '../helpers/propz/workerShape';
+// import myWorkers from '../../../db/workers';
+
+import workerShape from '../../helpers/propz/workerShape';
 
 class Worker extends React.Component {
   static propType = {
     worker: workerShape.workerShape,
+  }
+
+  state = {
+    workers: [],
+  }
+
+  componentDidMount() {
+    this.setState({ workers: myWorkers });
   }
 
   render() {

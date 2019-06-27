@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import workerShape from '../../helpers/propz/workerShape';
 
-import Worker from '../Worker';
+import Worker from '../Worker/Worker';
 
 class WorkerRoom extends React.Component {
   static propTypes = {

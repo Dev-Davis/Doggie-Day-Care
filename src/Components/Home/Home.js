@@ -1,9 +1,7 @@
 import React from 'react';
 
-import Dogs from '../Dogs';
-import Workers from '../Worker';
-
-import './Home.scss';
+import Dogs from '../Dogs/Dogs';
+import Workers from '../Worker/Worker';
 
 class Home extends React.Component {
   render() {

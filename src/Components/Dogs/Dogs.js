@@ -1,10 +1,11 @@
 import React from 'react';
 
-import dogShape from '../helpers/propz/dogShape';
+// import myDogs from '../../../db/dogs';
 
+import dogShape from '../../helpers/propz/dogShape';
 
 class Dog extends React.Component {
-  static propType = {
+  static propTypes = {
     dog: dogShape.dogShape,
   }
 

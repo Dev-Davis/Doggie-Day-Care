@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import dogShape from '../../helpers/propz/dogShape';
 
-import Dog from '../Dogs';
+import Dog from '../Dogs/Dogs';
 
 import './DogPen.scss';
 

@@ -1,7 +1,5 @@
 import React from 'react';
 
-import '../styles/index.scss';
-
 class DogContent extends React.Component {
   // State is the data. The information to print to the screeb
   state = {
