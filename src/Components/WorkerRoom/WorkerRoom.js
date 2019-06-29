@@ -1,18 +1,21 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-
-import workerShape from '../../helpers/propz/workerShape';
 
 import Worker from '../Worker/Worker';
+import workerData from '../../helpers/data/workerData';
 
 class WorkerRoom extends React.Component {
-  static propTypes = {
-    hired: PropTypes.arrayOf(workerShape.workerShape),
+  state = {
+    workers: [],
+  }
+
+  componentDidMount() {
+    workerData.getWorkers()
+      .then(workers => this.setState({ workers }))
+      .catch(err => console.error('could not get workers', err));
   }
 
   render() {
-    const { workers } = this.props;
-    const makeWorkers = workers.map(worker => (
+    const makeWorkers = this.state.workers.map(worker => (
       <Worker key={worker.id} worker={worker} />
     ));
     return (

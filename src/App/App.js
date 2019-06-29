@@ -1,13 +1,15 @@
 import React from 'react';
 import firebase from 'firebase/app';
 
+import './App.scss';
+
+import Home from '../Components/Home/Home';
 import Auth from '../Components/Auth/Auth';
 import Header from '../Components/Header/Header';
-import Home from '../Components/Home/Home';
 
-import connectFirebase from '../helpers/data/connection';
+import fireConnection from '../helpers/data/connection';
 
-connectFirebase();
+fireConnection();
 
 class App extends React.Component {
   state = {
@@ -39,7 +41,7 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <Header utheds={authed}/>
+        <Header authed={authed}/>
         {loadComponent()}
       </div>
     );

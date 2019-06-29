@@ -3,7 +3,7 @@ import firebaseKeys from '../apiKeys';
 
 const firebaseApp = () => {
   if (!firebase.apps.length) {
-    firebase.initializeApp(firebaseKeys.doggieKeys);
+    firebase.initializeApp(firebaseKeys.firebaseKeys);
   }
 };
 

@@ -1,15 +1,15 @@
 import axios from 'axios';
-import apiKeys from '../apiKeys';
+import firebaseConfig from '../apiKeys';
 
-const baseUrl = apiKeys.doggieKeys.databaseURL;
+const baseUrl = firebaseConfig.firebaseKeys.databaseURL;
 
 const getDogs = () => new Promise((resolve, reject) => {
   axios.get(`${baseUrl}/dogs.json`)
     .then((res) => {
       const dogs = [];
-      Object.keys[res.data].forEach((dogKey) => {
-        res.data[dogKey].iud = dogKey;
-        dogs.push(res.data[dogKey]);
+      Object.keys(res.data).forEach((baseKey) => {
+        res.data[baseKey].id = baseKey;
+        dogs.push(res.data[baseKey]);
       });
       resolve(dogs);
     })
