@@ -1,6 +1,6 @@
 import React from 'react';
 
-import workerShape from '../helpers/propz/workerShape';
+import workerShape from '../../helpers/propz/workerShape';
 
 class Worker extends React.Component {
   static propType = {

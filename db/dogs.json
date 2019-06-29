@@ -1,0 +1,74 @@
+{
+  "dog1":
+  {
+    "name": "Buddy",
+    "image": "https://www.petmd.com/sites/default/files/Acute-Dog-Diarrhea-47066074.jpg",
+    "color": "Brown",
+    "personality": "Happy",
+    "allergies": false,
+    "type": "dog"
+  },
+  "dog2":
+  {
+    "name": "Tippy",
+    "image": "https://cdn1.medicalnewstoday.com/content/images/articles/322/322868/golden-retriever-puppy.jpg",
+    "color": "Brown",
+    "personality": "Cheerful",
+    "allergies": false,
+    "type": "dog"
+  },
+  "dog3":
+  {
+    "name": "Rocky",
+    "image": "https://www.nationalgeographic.com/content/dam/animals/thumbs/rights-exempt/mammals/d/domestic-dog_thumb.jpg",
+    "color": "Black",
+    "personality": "Worried",
+    "allergies": false,
+    "type": "dog"
+  },
+  "dog4":
+  {
+    "name": "Max",
+    "image": "https://www.guidedogs.org/wp-content/uploads/2018/01/Mobile.jpg",
+    "color": "White",
+    "personality": "Shy",
+    "allergies": false,
+    "type": "dog"
+  },
+  "dog5":
+  {
+    "name": "Bear",
+    "image": "https://i.pinimg.com/originals/cf/8b/48/cf8b48441b346c96b61f102b6f20d47b.jpg",
+    "color": "White",
+    "personality": "Sneaky",
+    "allergies": false,
+    "type": "dog"
+  },
+  "dog6":
+  {
+    "name": "Chocolate",
+    "image": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/06/17/12/sei74187425.jpg",
+    "color": "Brown",
+    "personality": "Happy",
+    "allergies": false,
+    "type": "dog"
+  },
+  "dog7":
+  {
+    "name": "Lucy Liu",
+    "image": "https://r.hswstatic.com/w_907/gif/now-af0c66e7-4b34-4f23-ab8d-0506e4f35c5a-1210-680.jpg",
+    "color": "Mixed",
+    "personality": "Lazy",
+    "allergies": false,
+    "type": "dog"
+  },
+  "dog8":
+  {
+    "name": "Copper",
+    "image": "https://thenypost.files.wordpress.com/2018/05/180516-woman-mauled-by-angry-wiener-dogs-feature.jpg?quality=90&strip=all&w=618&h=410&crop=1",
+    "color": "Brown",
+    "personality": "Mean",
+    "allergies": false,
+    "type": "dog"
+  }
+}
