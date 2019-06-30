@@ -19,7 +19,7 @@ class WalksRoutine extends React.Component {
       <Walks key={walk.id} walk={walk}/>
     ));
     return (
-      <div className="WalksRoutine">
+      <div className="WalksRoutine d-flex flex-wrap col-10 offset-1">
         { createWalks }
       </div>
     );
