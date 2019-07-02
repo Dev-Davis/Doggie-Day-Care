@@ -4,16 +4,16 @@ import firebase from 'firebase/app';
 import DogPen from '../DogPen/DogPen';
 import WorkerRoom from '../WorkerRoom/WorkerRoom';
 import Walks from '../Walks/Walks';
+import Drop from '../Drop/Drop';
 
 import walksData from '../../helpers/data/walksData';
 import workerData from '../../helpers/data/workerData';
 import dogData from '../../helpers/data/dogData';
-import WalksRoutine from '../WalkRoutine/WalkRoutine';
 
 class Home extends React.Component {
   state = {
-    dogs: [],
-    workers: [],
+    dogs: {},
+    workers: {},
     walks: [],
     newWalks: {},
   }
@@ -55,15 +55,15 @@ class Home extends React.Component {
       <div className="Home">
         <div className="row">
           <div className="col">
-            <WalksRoutine
+            <Drop
             dogs={ dogs }
             workers={ workers }
-            deleteWalk={this.deleteWalk}
+            walks={ walks }
             />
             <Walks
             walks={ walks }
-            // dogs={ dogs }
-            // workers={ workers }
+            dogs={ dogs }
+            workers={ workers }
             deleteWalk={this.deleteWalk}
             />
             <DogPen
