@@ -3,7 +3,7 @@ import apiKeys from '../apiKeys';
 
 const baseUrl = apiKeys.firebaseKeys.databaseURL;
 
-const getWalks = () => new Promise((resolve, reject) => {
+const getWalks = uid => new Promise((resolve, reject) => {
   axios.get(`${baseUrl}/walks.json`)
     .then((res) => {
       const walks = [];
@@ -16,6 +16,6 @@ const getWalks = () => new Promise((resolve, reject) => {
     .catch(err => reject(err));
 });
 
-const deleteWalks = walkId => axios.delete(`${baseUrl}/walks/${walkId}.jjson`);
+const deleteWalk = walkId => axios.delete(`${baseUrl}/walks/${walkId}.json`);
 
-export default { getWalks, deleteWalks };
+export default { getWalks, deleteWalk };

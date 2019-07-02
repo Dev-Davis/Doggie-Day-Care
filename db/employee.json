@@ -1,5 +1,5 @@
 {
-  "teacher1":
+  "employee1":
   {
   "name": "Kelis",
   "imageUrl": "https://solarisstudios.com/wp-content/uploads/2016/05/Houston-Business-Headshot.jpg",
@@ -7,21 +7,21 @@
   "personality": "Happy",
   "graduate": true
   },
- "teacher2": {
-  "name": "Doreen",
+ "employee2": {
+  "name": "Adrianna",
   "imageUrl": "https://static1.squarespace.com/static/561bc82ce4b0fcd88cab31fd/561bd2eee4b06e46827f44d3/59c2fd3f8419c2eab9b97486/1506007867178/Professional-Headshots-Photography-Fort-Lauderdale-124.jpg?format=2500w",
-  "race": "Caucasian",
+  "race": "Hispanic",
   "personality": "Cheerful",
   "graduate": false
   },
-  "teacher3": {
+  "employee3": {
   "name": "Sam",
   "imageUrl": "https://34btrc76bq13ur6ts2gyygww-wpengine.netdna-ssl.com/wp-content/uploads/2016/03/vegas-professional-headshots.jpg",
   "race": "Caucasian",
   "personality": "Helpful",
   "graduate": false
   },
-  "teacher4": 
+  "employee4": 
   {
   "name": "Jason",
   "imageUrl": "https://www.cityheadshots.com/uploads/5/1/2/1/5121840/highres-mjb-3672_3_orig.jpg",

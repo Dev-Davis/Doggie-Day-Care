@@ -1,26 +1,31 @@
 import React from 'react';
-
-import Walks from '../Walks/Walks';
-import walksData from '../../helpers/data/walksData';
+import PropTypes from 'prop-types';
+import walkShape from '../../helpers/propz/walkShape';
 
 class WalksRoutine extends React.Component {
-  state = {
-    walks: [],
+  static propTypes = {
+    walk: walkShape.walkShape,
+    deleteWalk: PropTypes.func.isRequired,
   }
 
-  componentDidMount() {
-    walksData.getWalks()
-      .then(walks => this.setState({ walks }))
-      .catch(err => console.error('could not get walks', err));
-  }
+  deleteWalkEvent = (e) => {
+    const { walk, deleteWalk } = this.props;
+    e.preventDefault();
+    deleteWalk(walk.id);
+  };
 
   render() {
-    const createWalks = this.state.walks.map(walk => (
-      <Walks key={walk.id} walk={walk}/>
-    ));
+    const { walk } = this.props;
     return (
-      <div className="WalksRoutine d-flex flex-wrap col-10 offset-1">
-        { createWalks }
+      <div className="Walks">
+        <div className="card" style={{ width: 362 }}>
+          <div className="card-body">
+            <h3 className="card-title">{walk.props.name}</h3>
+            <h5 className="card-text">{this.props.employeeId}</h5>
+            <p className="card-text">{this.props.Date}</p>
+            <button className="btn btn-danger" onClick={this.deleteWalkEvent}>Delete</button>
+          </div>
+        </div>
       </div>
     );
   }
