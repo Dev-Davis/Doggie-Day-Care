@@ -80,6 +80,7 @@ class Home extends React.Component {
             dogs={ dogs }
             workers={ workers }
             deleteWalk={this.deleteWalk}
+            editWalks={this.editWalks}
             />
             <DogPen
             dogs={ dogs }
