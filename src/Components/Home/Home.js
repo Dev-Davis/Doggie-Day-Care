@@ -16,6 +16,7 @@ class Home extends React.Component {
     workers: [],
     walks: [],
     newWalk: {},
+    editWalks: {},
   }
 
   getWalks = () => {
@@ -52,6 +53,11 @@ class Home extends React.Component {
       .then(() => this.getWalks())
       .catch(err => console.error('could not delete order', err));
   }
+
+  editWalks = (walkObject) => {
+
+  }
+
 
   render() {
     const {

@@ -18,6 +18,10 @@ class WalksRoutine extends React.Component {
     deleteWalk(walk.id);
   };
 
+  editWalkEvent = (e) => {
+
+  }
+
   render() {
     const { walk } = this.props;
     return (
@@ -26,8 +30,9 @@ class WalksRoutine extends React.Component {
             <div className="card-body">
               <h2 className="card-title">{walk.dogId}</h2>
               <h3 className="card-text">{walk.employeeId}</h3>
-              <h3 className="card-text">{walk.date}</h3>
+              <h3 className="card-text">{walk.dateTime}</h3>
               <button className="btn btn-danger" onClick={this.deleteWalkEvent}>Delete</button>
+              <button className="btn btn-success" onClick={this.editWalkEvent}>Edit</button>
             </div>
         </div>
     </div>
