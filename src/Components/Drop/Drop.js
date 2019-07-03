@@ -4,7 +4,7 @@ class Drop extends React.Component {
   state = {
     dogId: '',
     employeeId: '',
-    date: '',
+    dateTime: '',
   };
 
 
@@ -20,7 +20,7 @@ class Drop extends React.Component {
 
   dateChange = (e) => {
     e.preventDefault();
-    this.setState({ date: e.target.value });
+    this.setState({ dateTime: e.target.value });
   }
 
   handleSubmit = (e) => {
@@ -31,7 +31,7 @@ class Drop extends React.Component {
     const newWalk = {
       dogId: this.state.dogId,
       employeeId: this.state.employeeId,
-      date: this.state.date,
+      dateTime: this.state.dateTime,
     };
     makeWalks(newWalk);
   }
@@ -58,7 +58,7 @@ class Drop extends React.Component {
             <input
               name="newWalk"
               type="text"
-              value={this.state.date} onChange={this.dateChange} />
+              value={this.state.dateTime} onChange={this.dateChange} />
           </label>
           <input type="submit" value="Submit" onClick={this.handleSubmit}/>
         </form>
