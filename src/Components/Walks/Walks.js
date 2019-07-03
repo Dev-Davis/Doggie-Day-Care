@@ -9,9 +9,10 @@ import walkShape from '../../helpers/propz/walkShape';
 import WalksRoutine from '../WalkRoutine/WalkRoutine';
 
 class Walks extends React.Component {
-  // state = {
-  //   walks: [],
-  // }
+  state = {
+    walks: [],
+  }
+
   static propTypes = {
     walk: walkShape.walkShape,
     deleteWalk: PropTypes.func.isRequired,

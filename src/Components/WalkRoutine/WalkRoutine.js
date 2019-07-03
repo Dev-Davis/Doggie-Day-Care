@@ -24,8 +24,9 @@ class WalksRoutine extends React.Component {
       <div className="Walk col-3">
         <div className="card" style={{ width: 362 }}>
             <div className="card-body">
-              <h3 className="card-title">{walk.dogId}</h3>
-              <h5 className="card-text">{walk.employeeId}</h5>
+              <h2 className="card-title">{walk.dogId}</h2>
+              <h3 className="card-text">{walk.employeeId}</h3>
+              <h3 className="card-text">{walk.date}</h3>
               <button className="btn btn-danger" onClick={this.deleteWalkEvent}>Delete</button>
             </div>
         </div>

@@ -1,59 +1,67 @@
 import React from 'react';
 
 class Drop extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { value: '' };
+  state = {
+    dogId: '',
+    employeeId: '',
+    date: '',
+  };
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+
+  dogChange = (e) => {
+    e.preventDefault();
+    this.setState({ dogId: e.target.value });
   }
 
-  handleChange(event) {
-    this.setState({ value: event.target.value });
+  employeeChange = (e) => {
+    e.preventDefault();
+    this.setState({ employeeId: e.target.value });
   }
 
-  handleSubmit(event) {
-    alert(`Your favorite flavor is: ${this.state.value}`);
-    event.preventDefault();
+  dateChange = (e) => {
+    e.preventDefault();
+    this.setState({ date: e.target.value });
+  }
+
+  handleSubmit = (e) => {
+    // if not defined as a function, create the function ex: const { makeWalks } = this.props;
+    // newWalk  is the object I'm passing back into the page
+    e.preventDefault();
+    const { makeWalks } = this.props;
+    const newWalk = {
+      dogId: this.state.dogId,
+      employeeId: this.state.employeeId,
+      date: this.state.date,
+    };
+    makeWalks(newWalk);
   }
 
   render() {
+    const doggies = this.props.dogs.map(dog => (
+      <option key={dog.id} value={dog.name}>{dog.name}</option>
+    ));
+    const techies = this.props.workers.map(worker => (
+      <option key={worker.id} value={worker.name}>{worker.name}</option>
+    ));
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
           <label>
-            Pick your dog:
-            <select value={this.state.value} onChange={this.handleChange}>
-              <option value="grapefruit">Grapefruit</option>
-              <option value="lime">Lime</option>
-              <option value="coconut">Coconut</option>
-              <option value="mango">Mango</option>
+            Select a dog:
+            <select value={this.state.dogId} onChange={this.dogChange}>
+              {doggies}
             </select>
-          </label>
-          <input type="submit" value="Submit" />
-        </form>
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Pick your teacher:
-            <select value={this.state.value} onChange={this.handleChange}>
-              <option value="grapefruit">Grapefruit</option>
-              <option value="lime">Lime</option>
-              <option value="coconut">Coconut</option>
-              <option value="mango">Mango</option>
+            Select a teacher:
+            <select value={this.state.employeeId} onChange={this.employeeChange}>
+              {techies}
             </select>
+            <input
+              name="newWalk"
+              type="text"
+              value={this.state.date} onChange={this.dateChange} />
           </label>
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Submit" onClick={this.handleSubmit}/>
         </form>
-        <label>
-          Number of guests:
-          <input
-            name="numberOfGuests"
-            type="text"
-            value={this.state.numberOfGuests}
-            onChange={this.handleInputChange} />
-            <input type="submit" value="Submit" />
-        </label>
       </div>
     );
   }

@@ -12,10 +12,10 @@ import dogData from '../../helpers/data/dogData';
 
 class Home extends React.Component {
   state = {
-    dogs: {},
-    workers: {},
+    dogs: [],
+    workers: [],
     walks: [],
-    newWalks: {},
+    newWalk: {},
   }
 
   getWalks = () => {
@@ -24,6 +24,14 @@ class Home extends React.Component {
       .catch(err => console.error('could not get walks', err));
   }
 
+  makeWalks = (walkObject) => {
+    walksData.createWalk(walkObject)
+      .then(() => {
+        this.setState({ newWalk: {} });
+        this.getWalks();
+      })
+      .catch(err => console.error('no new walks', err));
+  };
 
   getWorkers = () => {
     workerData.getWorkers()
@@ -59,6 +67,7 @@ class Home extends React.Component {
             dogs={ dogs }
             workers={ workers }
             walks={ walks }
+            makeWalks={this.makeWalks}
             />
             <Walks
             walks={ walks }
