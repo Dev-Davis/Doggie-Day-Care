@@ -9,7 +9,7 @@ class DogContent extends React.Component {
   render() {
     return (
       <div className="header">
-        <h1 className="title-head-name">The Doggie Day Care</h1>
+        <h1 className="title-head-name">Our Doggies</h1>
       </div>
     );
   }

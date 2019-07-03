@@ -22,17 +22,12 @@ body {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#root {
+  background-image: url(https://www.cityofdestin.com/ImageRepository/Path?filePath=%2FDocuments%5CContent%5C289%5C347%2Fdog+park+long+view.jpg);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-link {
+  color: #61dafb;
 }
 
 .title-head {
@@ -49,10 +44,19 @@ body {
 }
 
 .App {
-  background-color: skyblue;
+  background-color: whitesmoke;
 }
 
 .DogPen {
-  border-bottom: 1px solid black;
-  padding: 10px;
+  margin-left: 127px;
+  padding: 0px;
+  border: 0px;
+}
+
+.WorkerRoom {
+  margin-left: 67px;
+}
+
+.WalksRoutine {
+  margin-left: 37px;
 }

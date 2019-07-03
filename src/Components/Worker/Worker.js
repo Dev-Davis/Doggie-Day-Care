@@ -11,7 +11,7 @@ class Worker extends React.Component {
     const { worker } = this.props;
     return (
       <div className="Worker col-3">
-        <div className="card">
+        <div className="card" style={{ width: 362 }}>
           <img src={worker.imageUrl} className="card-img-top" alt="Employees" />
           <div className="card-body">
             <h3 className="card-title">{worker.name}</h3>

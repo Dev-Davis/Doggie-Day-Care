@@ -15,16 +15,13 @@ class DogPen extends React.Component {
       .then(dogs => this.setState({ dogs }))
       .catch(err => console.error('could not get dogs', err));
   }
-  // static propTypes = {
-  //   woof: PropTypes.arrayOf(dogShape.dogShape),
-  // }
 
   render() {
     const makeDogs = this.state.dogs.map(dog => (
       <Dog key={dog.id} dog={dog}/>
     ));
     return (
-      <div className="DogPen d-flex flex-wrap">
+      <div className="DogPen d-flex flex-wrap col-10">
           { makeDogs }
       </div>
     );
